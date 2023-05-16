@@ -42,9 +42,9 @@ AS
 										@COUNT_PARCELAS_INSERIDAS,
 										P.idEmpresa,
 										P.dtEmissao,
-										DATEADD(DAY,30,P.dtEmissao), -- as parcelas vencem a cada 30 dias a partir da data de emissão
-										@VLR_PARCELA_ATUALIZADA, --  valor da parcela de acordo com o valor total do pagamento e quantidade de parcelas
-										@PRC_TAXA_ADMINISTRACAO, --valor da taxa calculado de acordo com o percentual informado
+										DATEADD(DAY,30,P.dtEmissao),
+										@VLR_PARCELA_ATUALIZADA,
+										@PRC_TAXA_ADMINISTRACAO, 
 										P.idContaCorrente,
 										NULL,
 										NULL,
@@ -66,7 +66,7 @@ AS
 					IF(@QTD_PARCELAS_FALTANTES < 1)
 						BEGIN
 							ROLLBACK;
-							THROW 50001, 'A quantidade de parcelas inseridas não pode ser menor ou igual que as existentes.', 1;
+							THROW 50001, 'A quantidade de parcelas inseridas nÃ£o pode ser menor ou igual que as existentes.', 1;
 						END
 
 					ELSE
@@ -78,7 +78,7 @@ AS
 								 
 						WHILE(@COUNT_PARCELAS_INSERIDAS  <= @QTD_PARCELAS_FALTANTES)
 							BEGIN
-								--PARCELAS FALTANTES QUE SERÃO INSERIDAS EM TB_PARCELA 
+								--PARCELAS FALTANTES QUE SERÃƒO INSERIDAS EM TB_PARCELA 
 									INSERT INTO CARD.tbParcela 
 									(idPagamentoVenda,
 									nrParcela,
