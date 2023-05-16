@@ -1,4 +1,4 @@
-# Desafio-Financeiro-SQL
+# Exercício-Financeiro-SQL
 
 Para a View criada tem como objetivo:
 Fornecer uma camada adicional de abstração e simplificação na manipulação e consulta de dados. As views são objetos de banco de dados que representam consultas SQL predefinidas, armazenando-as como uma "visão" da estrutura e dos dados subjacentes nas tabelas do banco de dados.
