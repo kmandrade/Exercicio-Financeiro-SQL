@@ -1,9 +1,9 @@
 # Desafio-Financeiro-SQL
 
-# Para a View criada tem como objetivo:
+Para a View criada tem como objetivo:
 Fornecer uma camada adicional de abstração e simplificação na manipulação e consulta de dados. As views são objetos de banco de dados que representam consultas SQL predefinidas, armazenando-as como uma "visão" da estrutura e dos dados subjacentes nas tabelas do banco de dados.
 
-# A stored procedure (SP) chamada "SP_Corrige_Parcelas" tem como objetivo corrigir as parcelas de um pagamento de venda. Ela aceita três parâmetros: @ID_PAGAMENTO_VENDA (que é o ID do pagamento de venda a ser corrigido), @QTD_PARCELAS_A_CORRIGIR (que é a quantidade de parcelas a serem corrigidas) e @PRC_TAXA_ADMINISTRACAO (que é a taxa de administração a ser aplicada).
+A stored procedure (SP) chamada "SP_Corrige_Parcelas" tem como objetivo corrigir as parcelas de um pagamento de venda. Ela aceita três parâmetros: @ID_PAGAMENTO_VENDA (que é o ID do pagamento de venda a ser corrigido), @QTD_PARCELAS_A_CORRIGIR (que é a quantidade de parcelas a serem corrigidas) e @PRC_TAXA_ADMINISTRACAO (que é a taxa de administração a ser aplicada).
 Descrição dos procedimentos e validações realizados pela SP:
 
 Inicia uma transação para garantir a consistência dos dados.
@@ -15,7 +15,7 @@ Caso contrário, atualiza o valor das parcelas existentes para o valor atualizad
 Comita a transação se tudo for executado com sucesso. Caso contrário, desfaz a transação e imprime a mensagem de erro.
 Você pode executar essa SP fornecendo os valores adequados para os parâmetros. Por exemplo, "EXEC SP_Corrige_Parcelas 61476419, 2, 2.00;" irá executar a SP para corrigir 2 parcelas do pagamento de venda com ID 61476419, aplicando uma taxa de administração de 2.00. Certifique-se de ajustar os valores de acordo com o seu caso específico.
 
-# A stored procedure (SP) chamada "SP_Baixa_Titulos" tem como objetivo realizar a baixa de títulos (parcelas) com base em determinados parâmetros. Ela aceita cinco parâmetros: @DT_PAGAMENTO (data de pagamento), @ID_EMPRESA (ID da empresa), @ID_CONTA_CORRENTE (ID da conta corrente), @NR_DOCUMENTO (número do documento) e @DS_MOVIMENTO (descrição do movimento).
+A stored procedure (SP) chamada "SP_Baixa_Titulos" tem como objetivo realizar a baixa de títulos (parcelas) com base em determinados parâmetros. Ela aceita cinco parâmetros: @DT_PAGAMENTO (data de pagamento), @ID_EMPRESA (ID da empresa), @ID_CONTA_CORRENTE (ID da conta corrente), @NR_DOCUMENTO (número do documento) e @DS_MOVIMENTO (descrição do movimento).
 
 Descrição dos procedimentos e validações realizados pela SP:
 
