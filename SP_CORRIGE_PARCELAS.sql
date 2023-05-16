@@ -124,6 +124,6 @@ AS
 END
 GO
 
-EXEC SP_Corrige_Parcelas 61476419, 2, 2.00;
+EXEC SP_Corrige_Parcelas 123456, 2, 2.00;
 
 
